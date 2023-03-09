@@ -52,3 +52,8 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bar-table.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-white-shirt.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\shaker.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\glass.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle2.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle3.xnb
