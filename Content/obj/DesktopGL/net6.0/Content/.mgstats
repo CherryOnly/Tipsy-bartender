@@ -1,6 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-shelves.png","C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bin/DesktopGL/Content/bar-shelves.xnb","TextureProcessor","Texture2DContent",16053,2692885,0.2852399
 "C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-table.png","C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bin/DesktopGL/Content/bar-table.xnb","TextureProcessor","Texture2DContent",22806,1965685,0.3439295
+"C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-reaching.png","C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bin/DesktopGL/Content/bartender-reaching.xnb","TextureProcessor","Texture2DContent",5070,387157,0.1737956
 "C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender.png","C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bin/DesktopGL/Content/bartender.xnb","TextureProcessor","Texture2DContent",4377,304213,0.2133941
 "C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle1.png","C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bin/DesktopGL/Content/bottle1.xnb","TextureProcessor","Texture2DContent",468,24661,0.1788679
 "C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle2.png","C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bin/DesktopGL/Content/bottle2.xnb","TextureProcessor","Texture2DContent",396,20565,0.0032679
