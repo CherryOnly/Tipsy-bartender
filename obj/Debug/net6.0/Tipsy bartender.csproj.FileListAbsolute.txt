@@ -58,3 +58,38 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle2.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle3.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-white-shirt.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-shelves.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-table.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle2.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle3.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\glass.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\shaker.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Tipsy bartender.exe
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Tipsy bartender.deps.json
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Tipsy bartender.runtimeconfig.json
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Tipsy bartender.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Tipsy bartender.pdb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\MonoGame.Framework.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.csproj.AssemblyReference.cache
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.GeneratedMSBuildEditorConfig.editorconfig
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.AssemblyInfoInputs.cache
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.AssemblyInfo.cs
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.csproj.CoreCompileInputs.cache
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.csproj.CopyComplete
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\refint\Tipsy bartender.dll
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.pdb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\Tipsy bartender.genruntimeconfig.cache
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\obj\Debug\net6.0\ref\Tipsy bartender.dll

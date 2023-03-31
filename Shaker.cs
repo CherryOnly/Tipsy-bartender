@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,14 @@ namespace Tipsy_bartender
             origin = new Vector2(texture.Width / 2, texture.Height);
 
             spriteBatch.Draw(texture, position, null, Color.White, 0f, origin, 1f, SpriteEffects.None, layer);
+        }
+
+        public bool Clicked(MouseState mouseState)
+        {
+            return mouseState.X >= position.X - (texture.Width / 2) &&
+                   mouseState.X <= position.X + (texture.Width / 2) &&
+                   mouseState.Y >= position.Y - texture.Height &&
+                   mouseState.Y <= position.Y;
         }
     }
 }

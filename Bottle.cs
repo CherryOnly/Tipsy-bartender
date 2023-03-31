@@ -11,6 +11,7 @@ namespace Tipsy_bartender
     internal class Bottle : Sprite
     {
         public Vector2 origin;
+        public bool IsClicked { get; set; }
 
         public Bottle(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
         {
