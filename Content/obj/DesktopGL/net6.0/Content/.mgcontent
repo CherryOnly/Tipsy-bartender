@@ -4,15 +4,15 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-shelves.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-table.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-reaching.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle1.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle2.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle3.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/glass.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/shaker.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bar-shelves.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bar-table.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-reaching.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bottle1.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bottle2.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bottle3.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/glass.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/shaker.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

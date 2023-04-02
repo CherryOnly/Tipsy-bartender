@@ -11,6 +11,7 @@ namespace Tipsy_bartender
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
+        private PouringState pouringState;
 
         int screenWidth = 1440;
         int screenHeight = 900;
@@ -65,6 +66,8 @@ namespace Tipsy_bartender
 
             glass = new Glass(Content.Load<Texture2D>("glass"), new Vector2(screenWidth / 2 + 300, bottomShelf), 0.2f);
 
+            pouringState = new PouringState();
+
             bottle1 = new Bottle(Content.Load<Texture2D>("bottle1"), new Vector2(screenWidth / 2 + 200, topShelf), 0.2f);
             bottle2 = new Bottle(Content.Load<Texture2D>("bottle2"), new Vector2(screenWidth / 2 + 300, topShelf), 0.2f);
             bottle3 = new Bottle(Content.Load<Texture2D>("bottle3"), new Vector2(screenWidth / 2 + 400, topShelf), 0.2f);
@@ -76,7 +79,7 @@ namespace Tipsy_bartender
             Objects.Add(bottle3);
         }
 
-        protected override void Update(GameTime gameTime)
+        /*protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
@@ -90,7 +93,37 @@ namespace Tipsy_bartender
             }
 
             base.Update(gameTime);
+        }*/
+
+        protected override void Update(GameTime gameTime)
+        {
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
+
+            bartender.Update(gameTime);
+
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                HandleMouseClick(Mouse.GetState(), gameTime);
+            }
+
+            // Update the position of the clicked bottle
+            foreach (Sprite sprite in Objects)
+            {
+                if (sprite is Bottle bottle && bottle.IsClicked)
+                {
+                    bottle.position.Y -= 5;
+                    if (bottle.position.Y < 100) // Stop pouring when the bottle reaches a certain height
+                    {
+                        bottle.IsClicked = false;
+                    }
+                }
+            }
+
+            base.Update(gameTime);
         }
+
+
 
         protected override void Draw(GameTime gameTime)
         {
@@ -114,7 +147,8 @@ namespace Tipsy_bartender
             base.Draw(gameTime);
         }
 
-        public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
+
+        /*public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
         {
             foreach (Sprite sprite in Objects)
             {
@@ -138,6 +172,23 @@ namespace Tipsy_bartender
                     //}
                 }
             }
+        }*/
+        public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
+        {
+            foreach (Sprite sprite in Objects)
+            {
+                if (sprite is Bottle bottle &&
+                    mousePos.X >= bottle.position.X - (bottle.texture.Width / 2) &&
+                    mousePos.X <= bottle.position.X + (bottle.texture.Width / 2) &&
+                    mousePos.Y >= bottle.position.Y - bottle.texture.Height &&
+                    mousePos.Y <= bottle.position.Y)
+                {
+                    bottle.IsClicked = true;
+                    bartender.Target = bottle;
+                }
+            }
         }
+
+
     }
 }
