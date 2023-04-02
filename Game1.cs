@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace Tipsy_bartender
@@ -28,6 +29,9 @@ namespace Tipsy_bartender
         List<Sprite> Objects = new List<Sprite>();
 
         int bottomShelf, topShelf;
+
+        int barLeftBorder = 300;
+        int barRightBorder = 1140;
 
         public Game1()
         {
@@ -77,6 +81,8 @@ namespace Tipsy_bartender
             Objects.Add(bottle1);
             Objects.Add(bottle2);
             Objects.Add(bottle3);
+
+            Texture2D bartenderIdle = Content.Load<Texture2D>("bartender");
         }
 
         /*protected override void Update(GameTime gameTime)
@@ -100,27 +106,18 @@ namespace Tipsy_bartender
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            bartender.Update(gameTime);
+            // Get the current keyboard state
+            KeyboardState keyboardState = Keyboard.GetState();
 
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+            // Move the bartender left or right based on the 'A' and 'D' key presses
+            if (keyboardState.IsKeyDown(Keys.A))
             {
-                HandleMouseClick(Mouse.GetState(), gameTime);
+                bartender.MoveLeft(barLeftBorder);
             }
-
-            // Update the position of the clicked bottle
-            foreach (Sprite sprite in Objects)
+            if (keyboardState.IsKeyDown(Keys.D))
             {
-                if (sprite is Bottle bottle && bottle.IsClicked)
-                {
-                    bottle.position.Y -= 5;
-                    if (bottle.position.Y < 100) // Stop pouring when the bottle reaches a certain height
-                    {
-                        bottle.IsClicked = false;
-                    }
-                }
+                bartender.MoveRight(barRightBorder);
             }
-
-            base.Update(gameTime);
         }
 
 
@@ -148,7 +145,7 @@ namespace Tipsy_bartender
         }
 
 
-        /*public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
+       /* public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
         {
             foreach (Sprite sprite in Objects)
             {
@@ -173,9 +170,9 @@ namespace Tipsy_bartender
                 }
             }
         }*/
-        public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
+       public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
         {
-            foreach (Sprite sprite in Objects)
+            foreach (Sprite sprite in Objects.OfType<Bottle>())
             {
                 if (sprite is Bottle bottle &&
                     mousePos.X >= bottle.position.X - (bottle.texture.Width / 2) &&

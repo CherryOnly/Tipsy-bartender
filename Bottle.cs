@@ -12,6 +12,7 @@ namespace Tipsy_bartender
     {
         public Vector2 origin;
         public bool IsClicked { get; set; }
+        public bool IsDragged { get; set; }
 
         public Bottle(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
         {

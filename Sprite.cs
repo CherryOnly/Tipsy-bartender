@@ -16,6 +16,7 @@ namespace Tipsy_bartender
         public Vector2 position;
         public float layer;
 
+
         public Sprite(Texture2D texture, Vector2 position, float layer)
         {
             this.texture = texture;

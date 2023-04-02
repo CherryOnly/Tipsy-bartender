@@ -19,6 +19,15 @@ namespace Tipsy_bartender
 
         Vector2 startingPosition;
 
+        private bool hasInteracted;
+        private float pourTimer;
+        private float targetInteractionDistance = 10f;
+
+        private Texture2D reachingTexture;
+
+
+
+
         public Bartender(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
         {
             startingPosition = position;
@@ -26,26 +35,51 @@ namespace Tipsy_bartender
 
         public override void Update(GameTime gameTime)
         {
-            if(Keyboard.GetState().IsKeyDown(Keys.A))
+           /* if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
                 position.X -= speed;
-                if(isFlipped == false)
+                if (isFlipped == false)
                 {
                     spriteEffects = SpriteEffects.FlipHorizontally;
                     isFlipped = true;
                 }
-                    
             }
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
                 position.X += speed;
-                if(isFlipped == true)
+                if (isFlipped == true)
                 {
                     spriteEffects = SpriteEffects.None;
                     isFlipped = false;
                 }
             }
-            MoveToTarget(gameTime);
+            UpdateMovement(gameTime);*/
+        }
+
+        private void UpdateMovement(GameTime gameTime)
+        {
+            if (Target == null)
+            {
+                MoveToStartingPosition();
+                return;
+            }
+
+            // Move the bartender towards the target object
+            Vector2 direction = Target.position - position;
+            direction.Normalize();
+            position += direction * speed;
+
+            // When close enough, perform the action (e.g., pour the drink)
+            if (Vector2.Distance(position, Target.position) < 50)
+            {
+                // Perform action, like pouring the drink into the shaker
+                Target.position.Y -= 5;
+                if (Target.position.Y < 100)
+                {
+                    Target.position.Y = 200; // Reset the bottle position after pouring
+                    Target = null; // Clear the target after the action is completed
+                }
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -77,6 +111,7 @@ namespace Tipsy_bartender
 
         public void MoveToTarget(GameTime gameTime)
         {
+          
             if (Target == null) return;
 
             // Move the bartender towards the target object
@@ -96,6 +131,50 @@ namespace Tipsy_bartender
                 }
             }
         }
+
+        public void MoveToStartingPosition()
+        {
+            Vector2 direction = startingPosition - position;
+            float distance = Vector2.Distance(position, startingPosition);
+            if (distance > 1)
+            {
+                direction.Normalize();
+                position += direction * speed;
+            }
+            else
+            {
+                position = startingPosition;
+            }
+        }
+
+        public void MoveLeft(int barLeftBorder)
+        {
+            if (position.X - (texture.Width / 2) > barLeftBorder)
+            {
+                position.X -= 5;
+                spriteEffects = SpriteEffects.FlipHorizontally;
+            }
+        }
+
+        public void MoveRight(int barRightBorder)
+        {
+            if (position.X + (texture.Width / 2) < barRightBorder)
+            {
+                position.X += 5;
+                spriteEffects = SpriteEffects.None;
+            }
+        }
+        public void PourDrink(GameTime gameTime)
+        {
+        
+        }
+
+        public void ShakeDrink(GameTime gameTime)
+        {
+            
+        }
+
+
 
     }
 }

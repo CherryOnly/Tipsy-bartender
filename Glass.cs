@@ -22,7 +22,7 @@ namespace Tipsy_bartender
         {
             position.X += 100;
         }
-
+        
         public override void Draw(SpriteBatch spriteBatch)
         {
             // bottom middle of an object
