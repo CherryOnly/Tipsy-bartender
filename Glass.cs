@@ -21,7 +21,7 @@ namespace Tipsy_bartender
         public override void Update(GameTime gameTime)
         {
         }
-
+        
         public override void Draw(SpriteBatch spriteBatch)
         {
             // bottom middle of an object
