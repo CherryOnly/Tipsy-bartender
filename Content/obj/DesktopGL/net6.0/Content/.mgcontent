@@ -6,6 +6,7 @@
   <SourceFiles>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-shelves.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-table.png</File>
+    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-hand.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-holding-shaker-and-bottle.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-holding-shaker.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-pouring.png</File>
@@ -16,10 +17,15 @@
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle1.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle2.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bottle3.png</File>
+    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/customer-back.png</File>
+    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/customer-side.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/glass.png</File>
     <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/shaker.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

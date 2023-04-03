@@ -98,3 +98,6 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-bottle.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-shaker.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1-rotated.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\customer-back.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\customer-side.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-hand.xnb

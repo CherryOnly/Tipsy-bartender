@@ -37,6 +37,18 @@
 /processorParam:TextureFormat=Color
 /build:bar-table.png
 
+#begin bartender-hand.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:bartender-hand.png
+
 #begin bartender-holding-shaker-and-bottle.png
 /importer:TextureImporter
 /processor:TextureProcessor
