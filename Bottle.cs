@@ -11,8 +11,7 @@ namespace Tipsy_bartender
     internal class Bottle : Sprite
     {
         public Vector2 origin;
-        public bool IsClicked { get; set; }
-        public bool IsDragged { get; set; }
+        public bool isTaken = false;
 
         public Bottle(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
         {
@@ -20,7 +19,13 @@ namespace Tipsy_bartender
 
         public override void Update(GameTime gameTime)
         {
-            position.X += 100;
+            if(isTaken == true)
+            {
+                position.Y += 150 + texture.Height;
+                position.X -= 50;
+                isTaken = false;
+                return;
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
