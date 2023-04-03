@@ -19,7 +19,7 @@ namespace Tipsy_bartender
 
         public override void Update(GameTime gameTime)
         {
-            position.X += 100;
+            //position.X += 100;
         }
 
         public override void Draw(SpriteBatch spriteBatch)

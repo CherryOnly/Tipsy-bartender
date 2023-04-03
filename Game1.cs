@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Reflection.Emit;
 
 namespace Tipsy_bartender
 {
@@ -11,7 +12,6 @@ namespace Tipsy_bartender
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        private PouringState pouringState;
 
         int screenWidth = 1440;
         int screenHeight = 900;
@@ -27,7 +27,14 @@ namespace Tipsy_bartender
 
         List<Sprite> Objects = new List<Sprite>();
 
-        int bottomShelf, topShelf;
+        // Y coords lines (height)
+        public float bottomShelf, topShelf, walkingLine, servingLine, barLine;
+
+        Sprite target = null;
+
+        public Vector2 bottleOriginalCoords, shakerOriginalCoords;
+
+        float rotation = MathHelper.ToRadians(4500f);
 
         public Game1()
         {
@@ -60,13 +67,13 @@ namespace Tipsy_bartender
 
             barTable = Content.Load<Texture2D>("bar-table");
 
-            bartender = new Bartender(Content.Load<Texture2D>("bartender"), new Vector2(screenWidth / 2, screenHeight / 2 - 10), 0.3f);
+            bartender = new Bartender(Content.Load<Texture2D>("bartender"), new Vector2(screenWidth / 2, screenHeight / 2 + 230), 0.3f);
+            LoadBartenderAttributes();
+            walkingLine = bartender.position.Y;
 
             shaker = new Shaker(Content.Load<Texture2D>("shaker"), new Vector2(screenWidth / 2 + 200, bottomShelf), 0.2f);
 
             glass = new Glass(Content.Load<Texture2D>("glass"), new Vector2(screenWidth / 2 + 300, bottomShelf), 0.2f);
-
-            pouringState = new PouringState();
 
             bottle1 = new Bottle(Content.Load<Texture2D>("bottle1"), new Vector2(screenWidth / 2 + 200, topShelf), 0.2f);
             bottle2 = new Bottle(Content.Load<Texture2D>("bottle2"), new Vector2(screenWidth / 2 + 300, topShelf), 0.2f);
@@ -79,12 +86,13 @@ namespace Tipsy_bartender
             Objects.Add(bottle3);
         }
 
-        /*protected override void Update(GameTime gameTime)
+        protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
             bartender.Update(gameTime);
+            bottle1.Update(gameTime);
 
             if(Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
@@ -92,38 +100,76 @@ namespace Tipsy_bartender
                 HandleMouseClick(Mouse.GetState(), gameTime);
             }
 
-            base.Update(gameTime);
-        }*/
-
-        protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            bartender.Update(gameTime);
-
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+            if(bartender.isNearShaker == true)
             {
-                HandleMouseClick(Mouse.GetState(), gameTime);
+                bartender = new Bartender(Content.Load<Texture2D>("bartender-reaching-shaker"), bartender.position, 0.3f);
+                LoadBartenderAttributes();
+                bartender.pickShaker = true;
+
+                spriteBatch.Begin(SpriteSortMode.FrontToBack);
+                bartender.Draw(spriteBatch);
+                spriteBatch.End();
             }
 
-            // Update the position of the clicked bottle
-            foreach (Sprite sprite in Objects)
+            if(bartender.pickShaker == true)
             {
-                if (sprite is Bottle bottle && bottle.IsClicked)
-                {
-                    bottle.position.Y -= 5;
-                    if (bottle.position.Y < 100) // Stop pouring when the bottle reaches a certain height
-                    {
-                        bottle.IsClicked = false;
-                    }
-                }
+                shaker.layer = 0;
+                Objects.Remove(shaker);
+                bartender = new Bartender(Content.Load<Texture2D>("bartender-holding-shaker"), bartender.position, 0.3f);
+                LoadBartenderAttributes();
+                bartender.pickShaker = false;
+                bartender.isHoldingShaker = true;
+
+                spriteBatch.Begin(SpriteSortMode.FrontToBack);
+                bartender.Draw(spriteBatch);
+                spriteBatch.End();
+            }
+
+            if(bartender.isNearBottle == true)
+            {
+                bartender = new Bartender(Content.Load<Texture2D>("bartender-reaching-bottle"), bartender.position, 0.3f);
+                bartender.target = target;
+
+                spriteBatch.Begin(SpriteSortMode.FrontToBack);
+                bartender.Draw(spriteBatch);
+                spriteBatch.End();
+
+                bartender.pickBottle = true;
+            }
+
+            if(bartender.isHoldingBottle == true)
+            {
+                bartender = new Bartender(Content.Load<Texture2D>("bartender-holding-shaker-and-bottle"), bartender.position, 0.3f);
+                LoadBartenderAttributes();
+                bottle1.isPicked = true;
+                //bartender.moveBack = true;
+                bottle1.move = true;
+                
+
+                spriteBatch.Begin(SpriteSortMode.FrontToBack);
+                bartender.Draw(spriteBatch);
+                spriteBatch.End();
+            }
+
+            if(bottle1.inHand == true)
+            {
+                bartender = new Bartender(Content.Load<Texture2D>("bartender-pouring"), bartender.position, 0.3f);
+                Objects[2] = new Bottle(Content.Load<Texture2D>("bottle1-rotated"), Objects[2].position, 0.2f);
+                LoadBartenderAttributes();
+                
+                spriteBatch.Begin(SpriteSortMode.FrontToBack);
+                bartender.Draw(spriteBatch);
+                Objects[2].Draw(spriteBatch);
+                spriteBatch.End();
+            }
+
+            if(bartender.moveBack == false)
+            {
+                bottle1.move = false;
             }
 
             base.Update(gameTime);
         }
-
-
 
         protected override void Draw(GameTime gameTime)
         {
@@ -133,9 +179,10 @@ namespace Tipsy_bartender
 
             spriteBatch.Begin(SpriteSortMode.FrontToBack);
 
-            spriteBatch.Draw(barShelves, new Vector2(screenWidth / 2 - (barShelves.Width / 2),screenHeight / 2 - (barShelves.Height / 2) - 110), null, Color.White, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 0.1f);
-            spriteBatch.Draw(barTable, new Vector2(screenWidth / 2 - (barTable.Width / 2), screenHeight / 2 - (barTable.Height / 2) + 200), null, Color.White, 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 0.4f);
+            spriteBatch.Draw(barShelves, new Vector2(screenWidth / 2, screenHeight - 260), null, Color.White, 0f, new Vector2(barShelves.Width / 2, barShelves.Height), 1f, SpriteEffects.None, 0.1f);
+            spriteBatch.Draw(barTable, new Vector2(screenWidth / 2, screenHeight - 20), null, Color.White, 0f, new Vector2(barTable.Width / 2, barTable.Height), 1f, SpriteEffects.None, 0.4f);
             bartender.Draw(spriteBatch);
+            //bottle1.Draw(spriteBatch);
 
             foreach(Sprite sprite in Objects)
             {
@@ -147,8 +194,7 @@ namespace Tipsy_bartender
             base.Draw(gameTime);
         }
 
-
-        /*public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
+        public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
         {
             foreach (Sprite sprite in Objects)
             {
@@ -159,36 +205,33 @@ namespace Tipsy_bartender
                     mousePos.Y >= sprite.position.Y - sprite.texture.Height && 
                     mousePos.Y <= sprite.position.Y)
                 {
-                    // textures bounds (rectangles around textures)
-                    //Rectangle bartenderRect = new Rectangle((int)(bartender.position.X - (bartender.texture.Width / 2)), (int)(bartender.position.Y - (bartender.texture.Height / 2)), bartender.texture.Width, bartender.texture.Height);
-                    //Rectangle spriteRect = new Rectangle((int)(sprite.position.X - (sprite.texture.Width / 2)), (int)(sprite.position.Y - sprite.texture.Height), sprite.texture.Width, sprite.texture.Height);
-
-                    //while (!bartenderRect.Intersects(spriteRect))
-                    //{
-                        //bartenderRect = new Rectangle((int)(bartender.position.X - (bartender.texture.Width / 2)), (int)(bartender.position.Y - (bartender.texture.Height / 2)), bartender.texture.Width, bartender.texture.Height);
-                        //spriteRect = new Rectangle((int)(sprite.position.X - (sprite.texture.Width / 2)), (int)(sprite.position.Y - sprite.texture.Height), sprite.texture.Width, sprite.texture.Height);
-                        bartender.Move(sprite, gameTime);
-                        //base.Update(gameTime);
-                    //}
-                }
-            }
-        }*/
-        public void HandleMouseClick(MouseState mousePos, GameTime gameTime)
-        {
-            foreach (Sprite sprite in Objects)
-            {
-                if (sprite is Bottle bottle &&
-                    mousePos.X >= bottle.position.X - (bottle.texture.Width / 2) &&
-                    mousePos.X <= bottle.position.X + (bottle.texture.Width / 2) &&
-                    mousePos.Y >= bottle.position.Y - bottle.texture.Height &&
-                    mousePos.Y <= bottle.position.Y)
-                {
-                    bottle.IsClicked = true;
-                    bartender.Target = bottle;
+                    if (target == shaker)
+                    {
+                        Console.WriteLine("Shaker");
+                        target = sprite;
+                        shakerOriginalCoords = target.position;
+                        bartender.target = target;
+                        bartender.moveTowardsShaker = true;
+                    }
+                    else //if(target != shaker && bartender.isHoldingShaker == true)
+                    {
+                        Console.WriteLine("Not shaker");
+                        target = sprite;
+                        bottleOriginalCoords = target.position;
+                        bartender.target = target;
+                        bartender.moveTowardsBottle = true;
+                    }
                 }
             }
         }
 
-
+    public void LoadBartenderAttributes()
+        {
+            bartender.target = target;
+            bartender.walkingLine = walkingLine;
+            bartender.servingLine = bartender.walkingLine + 50;
+            bartender.leftBounds = + 375;
+            bartender.rightBounds = screenWidth - 375;
+        }
     }
 }
