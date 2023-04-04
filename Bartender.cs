@@ -31,17 +31,31 @@ namespace Tipsy_bartender
         // Shaker/bottle
         public Sprite target = null;
 
-        // Taking shaker
+        // Shaker
         public bool takeShaker = false;
         public bool shakerTaken = false;
         public bool isHoldingShaker = false;
 
-        // Taking bottles
+        // Bottles
         public bool takeBottle = false;
         public bool bottleTaken = false;
         public bool isHoldingBottle = false;
         public bool isPouring = false;
-        public bool putBottleBack = false;
+
+        // Shaking
+        public bool startShaking = false;
+        public bool readyToServe = false;
+
+        // Glass
+        public bool takeGlass = false;
+        public bool glassTaken = false;
+        public bool isFillingGlass = false;
+
+        // Drink
+        public bool isDrinkFinished = false;
+        public bool serveDrink = false;
+        public bool getBack = false;
+        public bool drinkServed = false;
 
 
         public Bartender(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
@@ -79,6 +93,15 @@ namespace Tipsy_bartender
 
             if (takeBottle == true)
                 TakeBottle();
+
+            if (takeGlass == true)
+                TakeGlass();
+
+            if (serveDrink == true)
+                ServeDrink();
+
+            if (getBack == true)
+                GetBack();
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -108,8 +131,6 @@ namespace Tipsy_bartender
 
         public void TakeBottle()
         {
-            Sprite sprite = target;
-
             // textures bounds (rectangles around textures)
             //Rectangle bartenderRect = new Rectangle((int)(position.X - (texture.Width / 2)), (int)(position.Y - texture.Height), texture.Width, texture.Height);
             //Rectangle spriteRect = new Rectangle((int)(sprite.position.X - (sprite.texture.Width / 2)), (int)(sprite.position.Y - sprite.texture.Height), sprite.texture.Width, sprite.texture.Height);
@@ -125,6 +146,50 @@ namespace Tipsy_bartender
             {
                 takeBottle = false;
                 bottleTaken = true;
+                return;
+            }
+        }
+
+        public void TakeGlass()
+        {
+            float targetX = target.position.X - (target.texture.Width / 2);
+
+            if (position.X + (texture.Width / 2) != targetX)
+            {
+                position.X += speed;
+            }
+            else
+            {
+                takeGlass = false;
+                glassTaken = true;
+                return;
+            }
+        }
+
+        public void ServeDrink()
+        {
+            if(position.Y <= servingLine)
+            {
+                position.Y += speed;
+            }
+            else
+            {
+                serveDrink = false;
+                getBack = true;
+                return;
+            }
+        }
+
+        public void GetBack()
+        {
+            if(position.Y >= walkingLine)
+            {
+                position.Y -= speed;
+            }
+            else
+            {
+                getBack = false;
+                drinkServed = true;
                 return;
             }
         }

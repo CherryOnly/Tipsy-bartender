@@ -11,8 +11,8 @@ namespace Tipsy_bartender
     internal class Glass : Sprite
     {
         public Vector2 origin;
-        // cocktail or beer (different texture)
-        string type;
+        public bool isTaken = false;
+        public bool isFilled = false;
 
         public Glass(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
         {

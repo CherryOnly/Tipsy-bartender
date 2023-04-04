@@ -12,6 +12,7 @@ namespace Tipsy_bartender
     internal class Shaker : Sprite
     {
         public Vector2 origin;
+        public bool isEmpty = true;
 
         public Shaker(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
         {
