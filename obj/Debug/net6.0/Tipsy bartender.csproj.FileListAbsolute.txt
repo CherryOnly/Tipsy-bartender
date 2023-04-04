@@ -109,3 +109,4 @@ D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1-rotated.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\customer-back.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\customer-side.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\File.xnb

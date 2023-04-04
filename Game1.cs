@@ -40,6 +40,13 @@ namespace Tipsy_bartender
         public readonly TimeSpan pouringTime = TimeSpan.FromSeconds(2);
         public TimeSpan pouringStart;
 
+        CustomerSprite Customersprite;
+        Texture2D CustomerTexture;
+        Texture2D customerSideTexture;
+        CustomerSideSprite customerSideSprite;
+        bool customerArrived = false;
+
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -91,6 +98,13 @@ namespace Tipsy_bartender
             Bottles.Add(bottle1);
             Bottles.Add(bottle2);
             Bottles.Add(bottle3);
+
+            CustomerTexture = Content.Load<Texture2D>("customer-back");
+            Customersprite = new CustomerSprite(CustomerTexture, new Vector2(400, 890), 0.8f, Content);
+
+            customerSideTexture = Content.Load<Texture2D>("customer-side");
+            customerSideSprite = new CustomerSideSprite(CustomerTexture, new Vector2(- 100, 890), 0.8f, Content);
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -181,6 +195,25 @@ namespace Tipsy_bartender
                 spriteBatch.End();
             }
 
+            if (!customerArrived && customerSideSprite.position.X <= 400)
+            {
+                customerSideSprite.position.X += 2f;
+            }
+            else
+            {
+                customerArrived = true;
+
+                // Remove the customerSideSprite from the Objects list
+                Objects.Remove(customerSideSprite);
+
+                // Replace it with the Customersprite
+                Objects.Add(Customersprite);
+
+                Customersprite.position = new Vector2(400, 890);
+                Customersprite.texture = Content.Load<Texture2D>("customer-back");
+            }
+
+
             base.Update(gameTime);
         }
 
@@ -197,7 +230,18 @@ namespace Tipsy_bartender
             shaker.Draw(spriteBatch);
             glass.Draw(spriteBatch);
 
-            foreach(Bottle bottle in Bottles)
+
+            // Draw the customer only when arrived
+            if (customerArrived)
+            {
+                Customersprite.Draw(spriteBatch);
+            }
+            else
+            {
+                customerSideSprite.Draw(spriteBatch);
+            }
+
+            foreach (Bottle bottle in Bottles)
             {
                 bottle.Draw(spriteBatch);
             }

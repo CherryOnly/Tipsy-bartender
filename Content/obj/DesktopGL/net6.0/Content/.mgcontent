@@ -19,10 +19,12 @@
     <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bottle3.png</File>
     <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/customer-back.png</File>
     <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/customer-side.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/File.spritefont</File>
     <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/glass.png</File>
     <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/shaker.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
