@@ -60,6 +60,7 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-white-shirt.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-shelves.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-table.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle2.xnb
@@ -100,13 +101,10 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\customer-back.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\customer-side.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-hand.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-hand.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-holding-shaker-and-bottle.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-holding-shaker.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-pouring.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-bottle.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-shaker.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1-rotated.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\customer-back.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\customer-side.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\File.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-shaking-down.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-shaking-up.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\shake-button-pressed.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\shake-button-unpressed.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-filling-glass.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-holding-glass.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\background.xnb

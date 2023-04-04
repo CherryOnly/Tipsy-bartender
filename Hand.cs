@@ -11,7 +11,6 @@ namespace Tipsy_bartender
     internal class Hand : Sprite
     {
         public Vector2 origin;
-        public bool move = false;
 
         public Hand(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
         {
@@ -19,10 +18,6 @@ namespace Tipsy_bartender
 
         public override void Update(GameTime gameTime)
         {
-            if(move == true)
-            {
-                //
-            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
