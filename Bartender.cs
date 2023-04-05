@@ -23,7 +23,7 @@ namespace Tipsy_bartender
 
         // For flipping sprite
         SpriteEffects spriteEffects = SpriteEffects.None;
-        bool isFlipped = false;
+        bool flip = false;
 
         // Bartender walking lines Y coords
         public float walkingLine, servingLine;
@@ -51,11 +51,14 @@ namespace Tipsy_bartender
         public bool glassTaken = false;
         public bool isFillingGlass = false;
 
-        // Drink
+        // Drink/Serving
         public bool isDrinkFinished = false;
+        public bool goToCustomer = false;
         public bool serveDrink = false;
         public bool getBack = false;
         public bool drinkServed = false;
+        public bool serveLeft = false;
+        public bool serveRight = false;
 
 
         public Bartender(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
@@ -70,22 +73,32 @@ namespace Tipsy_bartender
                 if (Keyboard.GetState().IsKeyDown(Keys.A) && position.X > leftBounds)
                 {
                     position.X -= speed;
-                    if (isFlipped == false)
+                    flip = true;
+                    /*if (flip == false)
                     {
                         spriteEffects = SpriteEffects.FlipHorizontally;
-                        isFlipped = true;
-                    }
-
+                        flip = true;
+                    }*/
                 }
                 if (Keyboard.GetState().IsKeyDown(Keys.D) && position.X < rightBounds)
                 {
                     position.X += speed;
-                    if (isFlipped == true)
+                    flip = false;
+                    /*if (flip == true)
                     {
                         spriteEffects = SpriteEffects.None;
-                        isFlipped = false;
-                    }
+                        flip = false;
+                    }*/
                 }
+            }
+
+            if(flip)
+            {
+                spriteEffects = SpriteEffects.FlipHorizontally;
+            }
+            else
+            {
+                spriteEffects = SpriteEffects.None;
             }
 
             if (takeShaker == true)
@@ -114,12 +127,21 @@ namespace Tipsy_bartender
 
         public void TakeShaker()
         {
-            // target's x coords line
-            float targetX = target.position.X - (target.texture.Width / 2);
+            // target's left side X coors line
+            float bartenderLeftSide = position.X - (texture.Width / 2);
+            float bartenderRightSide = position.X + (texture.Width / 2);
+            float targetLeftSide = target.position.X - (target.texture.Width / 2);
+            float targetRightSide = target.position.X + (target.texture.Width / 2);
 
-            if (position.X + (texture.Width / 2) != targetX)
+            if (bartenderRightSide < targetLeftSide)
             {
                 position.X += speed;
+                flip = false;
+            }
+            else if(bartenderLeftSide > targetRightSide)
+            {
+                position.X -= speed;
+                flip = true;
             }
             else
             {
@@ -136,11 +158,20 @@ namespace Tipsy_bartender
             //Rectangle spriteRect = new Rectangle((int)(sprite.position.X - (sprite.texture.Width / 2)), (int)(sprite.position.Y - sprite.texture.Height), sprite.texture.Width, sprite.texture.Height);
 
             // target's x coords line
-            float targetX = target.position.X - (target.texture.Width / 2);
+            float bartenderLeftSide = position.X - (texture.Width / 2);
+            float bartenderRightSide = position.X + (texture.Width / 2);
+            float targetLeftSide = target.position.X - (target.texture.Width / 2);
+            float targetRightSide = target.position.X + (target.texture.Width / 2);
 
-            if (position.X + (texture.Width / 2) != targetX)
+            if (bartenderRightSide < targetLeftSide)
             {
                 position.X += speed;
+                flip = false;
+            }
+            else if (bartenderLeftSide > targetRightSide)
+            {
+                position.X -= speed;
+                flip = true;
             }
             else
             {
@@ -152,11 +183,20 @@ namespace Tipsy_bartender
 
         public void TakeGlass()
         {
-            float targetX = target.position.X - (target.texture.Width / 2);
+            float bartenderLeftSide = position.X - (texture.Width / 2);
+            float bartenderRightSide = position.X + (texture.Width / 2);
+            float targetLeftSide = target.position.X - (target.texture.Width / 2);
+            float targetRightSide = target.position.X + (target.texture.Width / 2);
 
-            if (position.X + (texture.Width / 2) != targetX)
+            if (bartenderRightSide < targetLeftSide)
             {
                 position.X += speed;
+                flip = false;
+            }
+            else if (bartenderLeftSide > targetRightSide)
+            {
+                position.X -= speed;
+                flip = true;
             }
             else
             {
@@ -168,15 +208,35 @@ namespace Tipsy_bartender
 
         public void ServeDrink()
         {
-            if(position.Y <= servingLine)
+            float bartenderLeftSide = position.X - (texture.Width / 2);
+            float bartenderRightSide = position.X + (texture.Width / 2);
+            float targetLeftSide = target.position.X - (target.texture.Width / 2);
+            float targetRightSide = target.position.X + (target.texture.Width / 2);
+
+            if (position.X < target.position.X - 10)
             {
-                position.Y += speed;
+                position.X += speed;
+                flip = false;
+                serveLeft = true;
+            }
+            else if (position.X > target.position.X + 10)
+            {
+                position.X -= speed;
+                flip = true;
+                serveRight = true;
             }
             else
             {
-                serveDrink = false;
-                getBack = true;
-                return;
+                if (position.Y <= servingLine)
+                {
+                    position.Y += speed;
+                }
+                else
+                {
+                    serveDrink = false;
+                    getBack = true;
+                    return;
+                }
             }
         }
 

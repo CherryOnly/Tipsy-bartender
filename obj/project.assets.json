@@ -102,28 +102,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\manta\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\domin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Vilniaus kolegija\\3kursas\\2 semestras\\Kompiuterinių žaidimų kūrimas\\Tipsy-bartender\\Tipsy bartender.csproj",
+      "projectUniqueName": "C:\\Users\\domin\\OneDrive\\Documents\\GitHub\\Tipsy-bartender\\Tipsy bartender.csproj",
       "projectName": "Tipsy bartender",
-      "projectPath": "D:\\Vilniaus kolegija\\3kursas\\2 semestras\\Kompiuterinių žaidimų kūrimas\\Tipsy-bartender\\Tipsy bartender.csproj",
-      "packagesPath": "C:\\Users\\manta\\.nuget\\packages\\",
-      "outputPath": "D:\\Vilniaus kolegija\\3kursas\\2 semestras\\Kompiuterinių žaidimų kūrimas\\Tipsy-bartender\\obj\\",
+      "projectPath": "C:\\Users\\domin\\OneDrive\\Documents\\GitHub\\Tipsy-bartender\\Tipsy bartender.csproj",
+      "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\domin\\OneDrive\\Documents\\GitHub\\Tipsy-bartender\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\manta\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -173,7 +165,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

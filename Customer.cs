@@ -25,15 +25,15 @@ namespace Tipsy_bartender
             // Initializes the recipes dictionary with all the available cocktails and their ingredients
             recipes = new Dictionary<string, List<string>>()
         {
-            { "Screwdriver", new List<string>() { "Vodka", "Orange Juice" } },
+            /*{ "Screwdriver", new List<string>() { "Vodka", "Orange Juice" } },
             { "Whiskey and Coke", new List<string>() { "Whiskey", "Coca-Cola" } },
             { "Gin and Tonic", new List<string>() { "Gin", "Tonic Water" } },
             { "Brandy and Coke", new List<string>() { "Brandy", "Coca-Cola" } },
             { "Rum and Coke", new List<string>() { "Rum", "Coca-Cola" } },
-            { "Cuba Libre", new List<string>() { "Rum", "Coca-Cola", "Lime Juice" } },
+            { "Cuba Libre", new List<string>() { "Rum", "Coca-Cola", "Lime Juice" } },*/
             { "Vodka and Sprite", new List<string>() { "Vodka", "Sprite" } },
             { "Whiskey and Sprite", new List<string>() { "Whiskey", "Sprite" } },
-            { "Vodka Grenadine Splash", new List<string>() { "Vodka", "Sprite", "Grenadine" } }
+            //{ "Vodka Grenadine Splash", new List<string>() { "Vodka", "Sprite", "Grenadine" } }
         };
 
             // Select a random cocktail for the customer

@@ -53,10 +53,7 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-white-shirt.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\shaker.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\glass.xnb
-C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender.xnb
-C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle2.xnb
-C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle3.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-white-shirt.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-shelves.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-table.xnb
@@ -96,7 +93,6 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-pouring.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-bottle.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-shaker.xnb
-C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1-rotated.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\customer-back.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\customer-side.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-hand.xnb
@@ -124,3 +120,12 @@ D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-shaking-up.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\shake-button-pressed.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\shake-button-unpressed.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\File.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\splash-screen.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\start-button.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\sprite-rotated.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\sprite.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\vodka-rotated.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\vodka.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\whiskey-rotated.xnb
+C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\whiskey.xnb
