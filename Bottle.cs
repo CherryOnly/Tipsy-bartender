@@ -12,17 +12,19 @@ namespace Tipsy_bartender
     {
         public Vector2 origin;
         public bool isTaken = false;
+        public string type;
 
-        public Bottle(Texture2D texture, Vector2 position, float layer) : base(texture, position, layer)
+        public Bottle(Texture2D texture, Vector2 position, float layer, string type) : base(texture, position, layer)
         {
+            this.type = type;
         }
 
         public override void Update(GameTime gameTime)
         {
             if(isTaken == true)
             {
-                position.Y += 150 + texture.Height;
-                position.X -= 50;
+                position.Y += 20;
+                position.X -= 40;
                 isTaken = false;
                 return;
             }
