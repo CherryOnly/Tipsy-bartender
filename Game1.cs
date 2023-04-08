@@ -547,7 +547,12 @@ namespace Tipsy_bartender
 
                         currentOrder.Add(Bottles[0].type);
 
-                        Console.Write(currentOrder);
+                        Console.Write("Current order: ");
+                        foreach (string item in currentOrder)
+                        {
+                            Console.Write(item + " ");
+                        }
+                        Console.Write("\n");
 
                         target = sprite;
                         bottleOriginalCoords = target.position;
