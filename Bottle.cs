@@ -21,7 +21,8 @@ namespace Tipsy_bartender
 
         public override void Update(GameTime gameTime)
         {
-            if(isTaken == true)
+            // If the bottle is taken, move it to the position above the bartender's hand
+            if (isTaken == true)
             {
                 position.Y += 20;
                 position.X -= 40;
