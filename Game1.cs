@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection.Emit;
+using System.Reflection.Metadata;
 
 namespace Tipsy_bartender
 {
@@ -26,19 +27,21 @@ namespace Tipsy_bartender
         Glass glass2;
         Glass glass3;
         Glass glassTemp;
-        Bottle bottle1;
-        Bottle bottle2;
-        Bottle bottle3;
-        Bottle bottle4;
-        Bottle bottle5;
-        Bottle bottle6;
-        Bottle bottle7;
-        Bottle bottle8;
-        Bottle bottle9;
-        Bottle bottle10;
-        Bottle bottle11;
         Bottle bottleTemp;
         Button shakeButton;
+
+        List<string> bottles = new List<string> { 
+            "vodka", 
+            "brandy", 
+            "gin", 
+            "whiskey", 
+            "rum", 
+            "cola", 
+            "sprite", 
+            "tonic", 
+            "orange-juice", 
+            "lime-juice", 
+            "grenadine" };
 
         CustomerSprite customerBackSprite;
         Texture2D customerBackTexture;
@@ -49,9 +52,10 @@ namespace Tipsy_bartender
         List<Sprite> Objects = new List<Sprite>();
         List<Bottle> Bottles = new List<Bottle>();
         List<Glass> Glasses = new List<Glass>();
+        List<string> currentOrder = new List<string>();
 
         // Y coords lines (height)
-        public float bottomShelf, topShelf, walkingLine, servingLine, tableLine;
+        public float bottomShelf, topShelf, topShelfStart, walkingLine, servingLine, tableLine;
 
         Sprite target = null;
 
@@ -72,6 +76,9 @@ namespace Tipsy_bartender
         public TimeSpan customerDrinkingStartTime;
 
         public float glassX;
+        public bool correct = true;
+
+        public bool customerIsPresent = false;
 
         public Game1()
         {
@@ -99,6 +106,7 @@ namespace Tipsy_bartender
             barShelves = new Shelves(Content.Load<Texture2D>("bar-shelves"), new Vector2(screenWidth / 2, screenHeight - 250), 0.1f);
             bottomShelf = barShelves.position.Y - 230;
             topShelf = barShelves.position.Y - 370;
+            topShelfStart = barShelves.position.X - (barShelves.texture.Width / 2) + 100;
 
             barTable = new Table(Content.Load<Texture2D>("bar-table"), new Vector2(screenWidth / 2, screenHeight - 20), 0.4f);
             tableLine = barTable.position.Y - (barTable.texture.Height / 2) - 30;
@@ -116,41 +124,24 @@ namespace Tipsy_bartender
             glass2 = new Glass(Content.Load<Texture2D>("glass"), new Vector2(screenWidth / 2 + 380, bottomShelf), 0.2f);
             glass3 = new Glass(Content.Load<Texture2D>("glass"), new Vector2(screenWidth / 2 + 460, bottomShelf), 0.2f);
 
-            bottle1 = new Bottle(Content.Load<Texture2D>("vodka"), new Vector2(screenWidth / 2 + 200, topShelf), 0.2f, "vodka");
-            bottle2 = new Bottle(Content.Load<Texture2D>("whiskey"), new Vector2(screenWidth / 2 + 300, topShelf), 0.2f, "whiskey");
-            bottle3 = new Bottle(Content.Load<Texture2D>("sprite"), new Vector2(screenWidth / 2 + 400, topShelf), 0.2f, "sprite");
-
             shakeButton = new Button(Content.Load<Texture2D>("shake-button-unpressed"), new Vector2(150, screenHeight - 50), 0.7f);
 
             Objects.Add(shaker);
             Objects.Add(glass1);
             Objects.Add(glass2);
             Objects.Add(glass3);
-            Objects.Add(bottle1);
-            Objects.Add(bottle2);
-            Objects.Add(bottle3);
-            /*Objects.Add(bottle4);
-            Objects.Add(bottle5);
-            Objects.Add(bottle6);
-            Objects.Add(bottle7);
-            Objects.Add(bottle8);
-            Objects.Add(bottle9);
-            Objects.Add(bottle10);
-            Objects.Add(bottle11);*/
             Objects.Add(shakeButton);
             Objects.Add(barTable);
 
-            Bottles.Add(bottle1);
-            Bottles.Add(bottle2);
-            Bottles.Add(bottle3);
-            Bottles.Add(bottle4);
-            Bottles.Add(bottle5);
-            Bottles.Add(bottle6);
-            Bottles.Add(bottle7);
-            Bottles.Add(bottle8);
-            Bottles.Add(bottle9);
-            Bottles.Add(bottle10);
-            Bottles.Add(bottle11);
+            for (int i = 0; i < bottles.Count; i++)
+            {
+                Bottles.Add(new Bottle(Content.Load<Texture2D>(bottles[i]), new Vector2(topShelfStart + (i * 70), topShelf), 0.2f, bottles[i]));
+            }
+
+            foreach (Bottle bottle in Bottles)
+            {
+                Objects.Add(bottle);
+            }
 
             Glasses.Add(glass1);
             Glasses.Add(glass2);
@@ -160,7 +151,7 @@ namespace Tipsy_bartender
             customerBackSprite = new CustomerSprite(customerBackTexture, new Vector2(400, 890), 0.6f, Content);
 
             customerSideTexture = Content.Load<Texture2D>("customer-side");
-            customerSideSprite = new CustomerSideSprite(customerSideTexture, new Vector2(-100, 890), 0.6f, Content);
+            customerSideSprite = new CustomerSideSprite(customerSideTexture, new Vector2(screenWidth + 100, 890), 0.6f, Content);
 
             Objects.Add(customerBackSprite);
 
@@ -391,28 +382,81 @@ namespace Tipsy_bartender
                 spriteBatch.End();
             }
 
+            if(bartender.drinkServed == true)
+            {
+                if (currentOrder.Count == customerBackSprite.SelectedCocktail.Count)
+                {
+                    for (int i = 0; i < currentOrder.Count; i++)
+                    {
+                        if (currentOrder[i] != customerBackSprite.SelectedCocktail[i])
+                            correct = false;
+                    }
+                }
+                else
+                    correct = false;
+
+                //customerBackSprite.status = correct;
+
+                if (correct == true)
+                    Console.WriteLine("Happy");
+                else
+                    Console.WriteLine("Sad");
+
+                customerBackSprite = new CustomerSprite(customerBackTexture, new Vector2(400, 890), 0.6f, Content);
+                if (correct == true)
+                {
+                    Console.WriteLine("Happy");
+                    customerBackSprite.mood = "Happy";
+                }
+                else
+                {
+                    Console.WriteLine("Sad");
+                    customerBackSprite.mood = "Sad";
+                }
+
+                customerBackSprite.status = correct;
+                customerBackSprite.served = true;
+
+                spriteBatch.Begin(SpriteSortMode.FrontToBack);
+                customerBackSprite.Draw(spriteBatch);
+                spriteBatch.End();
+            }
+
             if(bartender.drinkServed == true && (customerDrinkingTime + customerDrinkingStartTime) < gameTime.TotalGameTime)
             {
                 Glasses[0] = new Glass(Content.Load<Texture2D>("glass"), glassOriginalCoords, 0.2f);
                 Objects.Add(Glasses[0]);
 
-                bartender.drinkServed = false;
+                customerBackSprite.served = true;
+                customerBackSprite.layer = 0f;
+
+                customerIsPresent = false;
+                customerArrived = false;
+
+                customerSideSprite = new CustomerSideSprite(customerSideTexture, new Vector2(screenWidth + 100, 890), 0.6f, Content);
+                //customerSideSprite.walkingOut = true;
 
                 spriteBatch.Begin(SpriteSortMode.FrontToBack);
                 Glasses[0].Draw(spriteBatch);
+                customerSideSprite.Draw(spriteBatch);
                 spriteBatch.End();
+
+                currentOrder.Clear();
             }
 
-            if (!customerArrived && customerSideSprite.position.X <= 700)
+            if (!customerArrived && customerSideSprite.position.X > 700)
             {
-                customerSideSprite.position.X += 3f;
+                customerSideSprite.position.X -= 3f;
             }
             else
             {
                 customerArrived = true;
+                customerSideSprite.walkingIn = false;
+
+                customerIsPresent = true;
 
                 // Remove the customerSideSprite from the Objects list
-                Objects.Remove(customerSideSprite);
+                //Objects.Remove(customerSideSprite);
 
                 // Replace it with the customerBackSprite
                 Objects.Add(customerBackSprite);
@@ -454,8 +498,7 @@ namespace Tipsy_bartender
 
             foreach (Bottle bottle in Bottles)
             {
-                if(bottle != null)
-                    bottle.Draw(spriteBatch);
+                bottle.Draw(spriteBatch);
             }
 
             shakeButton.Draw(spriteBatch);
@@ -488,7 +531,7 @@ namespace Tipsy_bartender
                         bartender.target = target;
                         bartender.takeShaker = true;
                     }
-                    if(sprite.GetType() == typeof(Bottle) && bartender.isHoldingShaker == true && bartender.readyToServe == false)
+                    if(sprite.GetType() == typeof(Bottle) && bartender.isHoldingShaker == true && bartender.readyToServe == false && bartender.isPouring == false)
                     {
                         Console.WriteLine("Bottle");
 
@@ -501,6 +544,15 @@ namespace Tipsy_bartender
                                 Bottles[i] = bottleTemp;
                             }
                         }
+
+                        currentOrder.Add(Bottles[0].type);
+
+                        Console.Write("Current order: ");
+                        foreach (string item in currentOrder)
+                        {
+                            Console.Write(item + " ");
+                        }
+                        Console.Write("\n");
 
                         target = sprite;
                         bottleOriginalCoords = target.position;
