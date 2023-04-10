@@ -4,51 +4,51 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/background.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-shelves.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bar-table.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-filling-glass.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-hand.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-holding-glass.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-holding-shaker-and-bottle.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-holding-shaker.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-pouring.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-reaching-bottle.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-reaching-shaker.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-shaking-down.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender-shaking-up.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/bartender.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/brandy-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/brandy.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/cola-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/cola.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/customer-back.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/customer-side.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/File.spritefont</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/gin-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/gin.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/glass.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/grenadine-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/grenadine.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/lime-juice-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/lime-juice.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/orange-juice-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/orange-juice.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/rum-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/rum.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/shake-button-pressed.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/shake-button-unpressed.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/shaker.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/splash-screen.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/sprite-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/sprite.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/start-button.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/tonic-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/tonic.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/vodka-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/vodka.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/whiskey-rotated.png</File>
-    <File>C:/Users/domin/OneDrive/Documents/GitHub/Tipsy-bartender/Content/whiskey.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/background.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bar-shelves.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bar-table.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-filling-glass.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-hand.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-holding-glass.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-holding-shaker-and-bottle.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-holding-shaker.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-pouring.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-reaching-bottle.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-reaching-shaker.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-shaking-down.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender-shaking-up.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/bartender.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/brandy-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/brandy.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/cola-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/cola.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/customer-back.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/customer-side.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/File.spritefont</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/gin-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/gin.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/glass.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/grenadine-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/grenadine.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/lime-juice-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/lime-juice.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/orange-juice-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/orange-juice.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/rum-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/rum.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/shake-button-pressed.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/shake-button-unpressed.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/shaker.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/splash-screen.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/sprite-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/sprite.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/start-button.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/tonic-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/tonic.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/vodka-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/vodka.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/whiskey-rotated.png</File>
+    <File>D:/Vilniaus kolegija/3kursas/2 semestras/Kompiuterinių žaidimų kūrimas/Tipsy-bartender/Content/whiskey.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

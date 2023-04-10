@@ -58,9 +58,6 @@ D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-shelves.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bar-table.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle2.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle3.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\glass.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\shaker.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Tipsy bartender.exe
@@ -109,7 +106,6 @@ D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-pouring.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-bottle.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bartender-reaching-shaker.xnb
-D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\bottle1-rotated.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\customer-back.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\customer-side.xnb
 D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\File.xnb
@@ -145,3 +141,27 @@ C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Conten
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\rum.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\tonic-rotated.xnb
 C:\Users\domin\OneDrive\Documents\GitHub\Tipsy-bartender\bin\Debug\net6.0\Content\tonic.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\brandy-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\brandy.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\cola-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\cola.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\gin-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\gin.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\grenadine-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\grenadine.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\lime-juice-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\lime-juice.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\orange-juice-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\orange-juice.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\rum-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\rum.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\splash-screen.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\sprite-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\sprite.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\start-button.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\tonic-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\tonic.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\vodka-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\vodka.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\whiskey-rotated.xnb
+D:\Vilniaus kolegija\3kursas\2 semestras\Kompiuterinių žaidimų kūrimas\Tipsy-bartender\bin\Debug\net6.0\Content\whiskey.xnb

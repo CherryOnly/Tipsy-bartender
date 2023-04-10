@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection.Emit;
 using System.Reflection.Metadata;
+using System.Security.AccessControl;
 
 namespace Tipsy_bartender
 {
@@ -79,6 +80,9 @@ namespace Tipsy_bartender
         public bool correct = true;
 
         public bool customerIsPresent = false;
+
+        List<string> BartenderMix = new List<string>();
+        List<string> CustomerWish = new List<string>();
 
         public Game1()
         {
@@ -382,18 +386,41 @@ namespace Tipsy_bartender
                 spriteBatch.End();
             }
 
-            if(bartender.drinkServed == true)
+
+
+            if (bartender.drinkServed == true)
             {
+
                 if (currentOrder.Count == customerBackSprite.SelectedCocktail.Count)
                 {
                     for (int i = 0; i < currentOrder.Count; i++)
                     {
                         if (currentOrder[i] != customerBackSprite.SelectedCocktail[i])
+                        {
                             correct = false;
+
+                        }
+                        // Add the current order item to the BartenderMix list
+                        BartenderMix.Add(currentOrder[i]);
+
+                        // Add the selected cocktail item to the CustomerWish list
+                        CustomerWish.Add(customerBackSprite.SelectedCocktail[i]);
+
                     }
                 }
                 else
                     correct = false;
+
+                    // Create an instance of the k-NN class with K=?
+                    KNearestNeighbor knn = new KNearestNeighbor(CustomerWish.Count);
+
+                    // Check if the bartender's mix matches the customer's wish
+                    bool match = knn.CheckMatch(BartenderMix, CustomerWish);
+
+                    double accuracy = knn.CalculateAccuracy(CustomerWish, BartenderMix);
+
+                
+
 
                 //customerBackSprite.status = correct;
 
@@ -421,6 +448,8 @@ namespace Tipsy_bartender
                 customerBackSprite.Draw(spriteBatch);
                 spriteBatch.End();
             }
+
+
 
             if(bartender.drinkServed == true && (customerDrinkingTime + customerDrinkingStartTime) < gameTime.TotalGameTime)
             {
